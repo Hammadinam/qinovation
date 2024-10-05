@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Web Development Team">
+    <link href="font/DomCasualD.ttf" rel="truetype">
+    <title>Our Web Development Team</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <!-- Header -->
+ <header>
+    
+    <a href="index.html" class="logo">
+        <img src="style/logo.png" style="width: 70px;" alt="">  </a>
+   <nav>
+        <ul>
+            <li><a href="#home" id="home-link">Home</a></li>
+            <li><a href="#about" id="about-link">About</a></li>
+            <li><a href="#services" id="services-link">Services</a></li>
+            <li><a href="#portfolio" id="portfolio-link">Portfolio</a></li>
+            <li><a href="#contact" id="contact-link">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Hero Section -->
+  
+        <section id="home" class="hero-section"><div><img class="banner-img" src="style/img1.jpg" alt="">
+            <h1>Professional Web Development Solutions</h1>
+            <p>We deliver fast, modern, and reliable websites tailored for your business.</p>
+            <a href="#contact" class="cta-btn">Get In Touch</a>
+            </div>
+        </section>
+
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <p>At “QUANTUM INNOVATION OF DEVELOPERS “, we are a team of passionate web developers dedicated to helping businesses to grow by creating innovative and efficient online solutions. With 2 years of experience in web design and development ,we specialize in delivering tailored websites that are not only visually stunning but also highly functional and responsive.
+        </p>
+        <p>We understand the importance of a powerful digital presence, which is why we focus on user experience, performance, and security. Whether you need a simple landing page, a complex e-commerce platform, or any other website , our skilled team is ready to bring your vision to life. We believe in clear communication, transparency, and collaboration to ensure your project aligns with your goals.
+        </p>
+        <p>
+            At “QUANTUM INNOVATION OF DEVELOPERS “, our commitment goes beyond just building websites—we build long-term partnerships. From initial consultation to post-launch support, we are here to help your business succeed in an ever-evolving digital landscape. Let us be your trusted web development partner and take your business to the next level.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <h2>Our Services</h2>
+        <div class="service-cards">
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>Our Web Development service focuses on creating custom, high-performance websites that meet your unique business needs. Whether you need a dynamic website, an e-commerce platform, or a web application, we deliver solutions that are responsive, user-friendly, and optimized for performance.
+                </p>
+                <p>With expertise in front-end and back-end development, we ensure that your site not only looks great but functions seamlessly across all devices. From design to deployment, we work closely with you to build secure, scalable websites that drive engagement and enhance your online presence. Let us turn your vision into a powerful digital solution.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>UI/UX Design</h3>
+                <p>Our UI/UX Design service is dedicated to crafting intuitive and visually engaging digital experiences. We focus on user-centric design, ensuring that every interaction is smooth, meaningful, and aligned with your business goals. By blending aesthetic appeal with usability, we create interfaces that not only look great but also provide seamless navigation.
+                </p>
+                <p>Through thorough research, wireframing, and prototyping, we develop designs that enhance user satisfaction and drive conversions. Whether you need a fresh website design, or a full digital revamp, our UI/UX solutions help your brand stand out and deliver an exceptional user experience.
+                </p>
+            </div>
+            <div class="service-card">
+                <h3>E-commerce Solutions</h3>
+                <p>Our E-commerce Development service empowers businesses to thrive in the digital marketplace. We build custom, scalable online stores designed to maximize sales and enhance user experience. From intuitive product catalogs to secure payment gateways and seamless checkout processes, our e-commerce solutions are optimized for performance, security, and growth.
+
+                    We integrate the latest technologies to ensure your store is responsive, fast, and accessible across all devices. Whether you’re starting from scratch or looking to upgrade your existing platform, our team delivers tailored solutions that help you reach a global audience and drive online success.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <h2>Our Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">Project 1</div>
+            <div class="portfolio-item">Project 2</div>
+            <div class="portfolio-item">Project 3</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Let’s build something great together!</p>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Your Team. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript for glowing nav bar -->
+    <script>
+        // Function to highlight the nav link of the section currently in view
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            let currentSection = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+                    currentSection = section.getAttribute('id');  // Get the current section's ID
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');  // Remove active class from all links
+                if (link.getAttribute('href').includes(currentSection)) {
+                    link.classList.add('active');  // Add active class to the link of the current section
+                }
+            });
+        });
+    </script>
+</body>
+</html>
