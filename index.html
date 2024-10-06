@@ -14,22 +14,59 @@
  <header>
     
     <a href="index.html" class="logo">
-        <img src="style/logo.png" style="width: 70px;" alt="">  </a>
-   <nav>
-        <ul>
-            <li><a href="#home" id="home-link">Home</a></li>
-            <li><a href="#about" id="about-link">About</a></li>
-            <li><a href="#services" id="services-link">Services</a></li>
-            <li><a href="#portfolio" id="portfolio-link">Portfolio</a></li>
-            <li><a href="#contact" id="contact-link">Contact</a></li>
-        </ul>
-    </nav>
+        <img src="style/logo.png" style="width: 200px;" alt="">  </a>
+
+  
+        
+   
+   
+    <ul class="sidebar">
+        <li style="align-items: right;" onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg></a></li>
+        <li ><a href="#home" id="home-link">Home</a></li>
+         <li ><a href="#about" id="about-link">About</a></li>
+        <li ><a href="#services" id="services-link">Services</a></li>
+        <li ><a href="#portfolio" id="portfolio-link">Portfolio</a></li>
+        <li ><a href="#contact" id="contact-link">Contact</a></li>
+        
+    </ul>
+  
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+        }
+    </script>
+   
+    
+    <nav>
+    <ul>
+       
+         <li class="hideonmobile"><a href="#home" id="home-link">Home</a></li>
+        
+        <li class="hideonmobile"><a href="#about" id="about-link">About</a></li>
+        <li class="hideonmobile"><a href="#services" id="services-link">Services</a></li>
+        <li class="hideonmobile"><a href="#portfolio" id="portfolio-link">Portfolio</a></li>
+        <li class="hideonmobile"><a href="#contact" id="contact-link">Contact</a></li>
+      
+  
+   
+   </ul>
+   
+   
+   
+         <li style="float: right; transition: 2s;" class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 96 960 960" width="26"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></a></li> 
+
+</nav>
 </header>
 
     <!-- Hero Section -->
   
         <section id="home" class="hero-section"><div><img class="banner-img" src="style/img1.jpg" alt="">
-            <h1>Professional Web Development Solutions</h1>
+            <h1>Pioneering the Future of Web Development with Quantum Excellence</h1>
             <p>We deliver fast, modern, and reliable websites tailored for your business.</p>
             <a href="#contact" class="cta-btn">Get In Touch</a>
             </div>
@@ -39,17 +76,17 @@
     <!-- About Us Section -->
     <section id="about" class="about-section">
         <h2>About Us</h2>
-        <p>At “QUANTUM INNOVATION OF DEVELOPERS “, we are a team of passionate web developers dedicated to helping businesses to grow by creating innovative and efficient online solutions. With 2 years of experience in web design and development ,we specialize in delivering tailored websites that are not only visually stunning but also highly functional and responsive.
+        <p>At “SWAT TECH INNOVATION “, we are a team of passionate web developers dedicated to helping businesses to grow by creating innovative and efficient online solutions. With 2 years of experience in web design and development ,we specialize in delivering tailored websites that are not only visually stunning but also highly functional and responsive.
         </p>
         <p>We understand the importance of a powerful digital presence, which is why we focus on user experience, performance, and security. Whether you need a simple landing page, a complex e-commerce platform, or any other website , our skilled team is ready to bring your vision to life. We believe in clear communication, transparency, and collaboration to ensure your project aligns with your goals.
         </p>
         <p>
-            At “QUANTUM INNOVATION OF DEVELOPERS “, our commitment goes beyond just building websites—we build long-term partnerships. From initial consultation to post-launch support, we are here to help your business succeed in an ever-evolving digital landscape. Let us be your trusted web development partner and take your business to the next level.</p>
+            At “SWAT TECH INNOVATION “, our commitment goes beyond just building websites—we build long-term partnerships. From initial consultation to post-launch support, we are here to help your business succeed in an ever-evolving digital landscape. Let us be your trusted web development partner and take your business to the next level.</p>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="services-section">
-        <h2>Our Services</h2>
+        <h1 style="color: #6a0dad; font-weight: bold;">Our Services</h1>
         <div class="service-cards">
             <div class="service-card">
                 <h3>Web Development</h3>
@@ -76,7 +113,7 @@
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio-section">
-        <h2>Our Portfolio</h2>
+        <h1 style="color: #6a0dad; font-weight: bold;">Our Portfolio</h1>
         <div class="portfolio-grid">
             <div class="portfolio-item">Project 1</div>
             <div class="portfolio-item">Project 2</div>
@@ -86,7 +123,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-        <h2>Contact Us</h2>
+        <h1>Contact Us</h1>
         <p>Let’s build something great together!</p>
         <form>
             <input type="text" placeholder="Your Name" required>
@@ -125,6 +162,7 @@
                 }
             });
         });
+        
     </script>
 </body>
 </html>

@@ -27,12 +27,8 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  
-   
     height: 90px;
-  
-   
-    z-index: 1000;
+  z-index: 1000;
 }
 
 /* Styling for the  items */
@@ -78,7 +74,7 @@ header nav ul li a:hover {
 
 
 header .logo {
-    width: 70px;
+  width: 80px;
     transition-duration: 0.6s;
 }
 /* General  link styles */
@@ -88,6 +84,84 @@ nav ul li a {
     padding: 10px;
     transition: box-shadow 0.3s ease, color 0.3s ease;
     padding-left: 30px;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 200px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+header ul.sidebar  {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+   
+    font-weight: 800;
+   
+    
+  
+    list-style: none;
+    padding: 0.2rem;  /* Adds padding for better clickability */
+    transition: color 0.3s ease;  /* Smooth transition on hover */
+   
+  
+    text-align: center;
+}
+header ul.sidebar li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+    padding-left: 30px;
+    border: #000000;
+    border-width: 3px;  
+}
+header ul.sidebar li  {
+    background: linear-gradient(to right, #6A0DAD, #00BFFF);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: box-shadow 0.3s ease, color 0.3s ease;
+    padding-left: 30px;
+    border-radius: 20px;
+    border-width: 3px;    
+}
+.menu-button.sticky {
+    color: #000000;
+}
+
+.sidebar a {
+    width: 100%;
+    padding: 10px;
+}
+
+.menu-button {
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .hideonmobile {
+        display: none;
+    }
+    .menu-button {
+        display: block;
+        align-items: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .sidebar {
+        width: 100%;
+    }
 }
 
 /* Add glow effect to the active link */
@@ -167,7 +241,7 @@ nav ul li a.active {
 .about-section p {
     font-size: 1.2rem;
     color: #666;
-    font-family:FS Ostro ;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 /* Services Section */
@@ -175,6 +249,8 @@ nav ul li a.active {
     padding: 50px;
     background-color: #f4f4f4;
     text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
 }
 
 .service-cards {
@@ -187,7 +263,7 @@ nav ul li a.active {
     background-color: #fff;
     padding: 20px;
     margin: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 8px rgba(106, 13, 173, 1);
     flex-basis: 30%;
 }
 
@@ -205,7 +281,7 @@ nav ul li a.active {
 }
 
 .portfolio-item {
-    background-color: #333;
+    background: linear-gradient(to right, #6A0DAD, #00BFFF);
     color: #fff;
     padding: 20px;
     margin: 10px;
@@ -217,6 +293,8 @@ nav ul li a.active {
     padding: 50px;
     background-color: #f4f4f4;
     text-align: center;
+    color: #6a0dad;
+    font-weight: 800;
 }
 
 .contact-section form {
@@ -242,7 +320,7 @@ nav ul li a.active {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background: linear-gradient(to right, #6A0DAD, #00BFFF);
     color: white;
     padding: 10px;
     text-align: center;
